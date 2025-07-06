@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tristar Motor Group - Madhapur</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    header img {
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 4px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    /* Hero Video Background */
+    .hero {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.5);
+      padding: 30px;
+      border-radius: 12px;
+      color: white;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero-content h2 {
+      font-size: 32px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .car-listing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .car {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .car:hover {
+      transform: translateY(-5px);
+    }
+
+    .car img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 5px;
+    }
+
+    .car a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .car a.button:hover {
+      background: #218838;
+    }
+
+    .brands {
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    .brand-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .brand-logos img {
+      height: 50px;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    .brand-logos img:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .reviews {
+      background-color: #f0f0f0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .review-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .review {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .why-choose-us {
+      background: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .why-choose-us h2 {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .why-choose-us ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .why-choose-us li {
+      margin: 15px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .why-choose-us li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    .about-section {
+      padding: 40px 20px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebc59;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="tristar-logo.png" alt="Tristar Logo" />
+    <div>
+      <h1>Tristar Motor Group</h1>
+      <p>Luxury Pre-Owned Cars in Madhapur, Hyderabad</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#inventory">Inventory</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <video autoplay muted loop>
+      <source src="banner.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h2>Your Dream Car Awaits</h2>
+      <p>Explore Hyderabad’s finest collection of premium pre-owned vehicles.</p>
+      <a href="#inventory" class="hero-btn">Browse Inventory</a>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <section id="inventory">
+      <h2>Luxury Collection</h2>
+      <div class="car-listing">
+        <div class="car">
+          <img src="bmw-x5-front.jpg" alt="BMW X5">
+          <h3>BMW X5</h3>
+          <p>₹89 Lakhs</p>
+          <a href="bmw-x5.html" class="button">View Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands">
+      <h2>Top Brands We Deal</h2>
+      <div class="brand-logos">
+        <img src="bmw.png" alt="BMW">
+        <img src="audi.png" alt="Audi">
+        <img src="mercedes.png" alt="Mercedes">
+        <img src="volvo.png" alt="Volvo">
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>What Our Customers Say</h2>
+      <div class="review-cards">
+        <div class="review">
+          <p>“Excellent condition and great support from the Tristar team!”</p>
+          <strong>- Akash Reddy</strong>
+        </div>
+        <div class="review">
+          <p>“Luxury cars at the best price. Loved the experience!”</p>
+          <strong>- Sneha G.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-us">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Trusted by over 5,000 happy customers</li>
+        <li>100+ luxury vehicles in our inventory</li>
+        <li>Certified and thoroughly inspected vehicles</li>
+        <li>Flexible financing and EMI options</li>
+        <li>Free vehicle service for first 6 months</li>
+        <li>Best resale and exchange value in Hyderabad</li>
+        <li>Instant loan assistance and insurance support</li>
+        <li>Located conveniently in Madhapur</li>
+      </ul>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2>About Us</h2>
+      <p>
+        At <strong>Tristar Motor Group</strong>, we redefine the luxury car experience by offering a premium selection of pre-owned vehicles that combine performance, style, and trust.
+      </p>
+      <p>
+        Whether you're seeking the elegance of a BMW, the power of a Mercedes, or the precision of an Audi, we’ve got it all. Each vehicle undergoes a multi-point quality inspection to ensure our customers drive away with complete confidence and satisfaction.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> Plot No. 4, Near Nectar Garden, Doctor’s Colony, Madhapur, Hyderabad</p>
+      <p><strong>Email:</strong> tristarmotorgroup@gmail.com</p>
+      <p><strong>Phone:</strong> +91 96183 56060</p>
+    </section>
+
+  </div>
+
+  <a href="https://wa.me/919618356060" class="whatsapp-float" target="_blank">💬 Chat with Us</a>
+
+  <footer>
+    &copy; 2025 Tristar Motor Group. All rights reserved.
+  </footer>
+
+</body>
+</html>

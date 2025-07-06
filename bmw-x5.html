@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMW X5 - Tristar Motor Group</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px; /* increase if image is tall */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+  background-color: #000; /* Optional: adds black background to fill space */
+}
+
+    .slider img.active {
+      display: block;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .slider-btn.prev { left: 10px; }
+    .slider-btn.next { right: 10px; }
+
+    h2 {
+      margin-top: 25px;
+      font-size: 26px;
+      color: #333;
+    }
+
+    .details p {
+      line-height: 1.6;
+      margin: 8px 0;
+    }
+
+    .test-drive-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .test-drive-btn:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="tristar-logo.png" alt="Tristar Logo" />
+  <h1>Tristar Motor Group</h1>
+</header>
+
+<div class="container">
+  <div class="slider">
+    <img src="bmw-x5-front.jpg" class="active" alt="BMW X5 - 1">
+    <img src="bmw-x5-rear.jpg" alt="BMW X5 - 2">
+    <img src="bmw-x5-side.jpg" alt="BMW X5 - 3">
+    <button class="slider-btn prev">&#10094;</button>
+    <button class="slider-btn next">&#10095;</button>
+  </div>
+
+  <h2>BMW X5 - xDrive40i M Sport</h2>
+  <div class="details">
+    <p><strong>Model:</strong> 2023</p>
+    <p><strong>Variant:</strong> xDrive40i M Sport</p>
+    <p><strong>Color:</strong> Carbon Black</p>
+    <p><strong>Fuel:</strong> Petrol</p>
+    <p><strong>Transmission:</strong> Automatic</p>
+    <p><strong>Kilometers Driven:</strong> 8,000 KM</p>
+    <p><strong>Insurance:</strong> Valid till Jan 2026</p>
+    <p><strong>Price:</strong> ₹89,00,000</p>
+    <p><strong>Registration Number:</strong> TS09 XYZ 9999</p>
+  </div>
+
+  <a href="test-drive.html" class="test-drive-btn">Book a Test Drive</a>
+</div>
+
+<script>
+  const images = document.querySelectorAll('.slider img');
+  let current = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.remove('active');
+      if (i === index) img.classList.add('active');
+    });
+  }
+
+  document.querySelector('.next').onclick = () => {
+    current = (current + 1) % images.length;
+    showImage(current);
+  }
+
+  document.querySelector('.prev').onclick = () => {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+  }
+</script>
+
+</body>
+</html>
