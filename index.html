@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="google-site-verification" content="C01br38-77YHbJkyUFkN13UPIZYftZGTpBgX1cOd6vc" />
   <title>Tristar Motor Group - Madhapur</title>
   <style>
     * {
@@ -160,24 +159,38 @@
       text-align: center;
     }
 
-    .brand-logos {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 20px;
-    }
+.brand-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 50px; /* Increased from 30px to 50px */
+  justify-items: center;
+  margin-top: 30px;
+}
 
-    .brand-logos img {
-      height: 50px;
-      opacity: 0.8;
-      transition: 0.3s;
-    }
 
-    .brand-logos img:hover {
-      opacity: 1;
-      transform: scale(1.1);
-    }
+.brand-item {
+  text-align: center;
+}
+
+.brand-item img {
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.brand-item img:hover {
+  transform: scale(1.1);
+}
+
+.brand-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
 
     .reviews {
       background-color: #f0f0f0;
@@ -266,6 +279,51 @@
       from {opacity: 0;}
       to {opacity: 1;}
     }
+
+@media (max-width: 768px) {
+  .hero {
+    height: 250px;
+  }
+
+  .hero-content {
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 90%;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 200px;
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .hero-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -311,15 +369,64 @@
       </div>
     </section>
 
-    <section class="brands">
-      <h2>Top Brands We Deal</h2>
-      <div class="brand-logos">
-        <img src="bmw.png" alt="BMW">
-        <img src="audi.png" alt="Audi">
-        <img src="mercedes.png" alt="Mercedes">
-        <img src="volvo.png" alt="Volvo">
-      </div>
-    </section>
+<section class="brands" id="brands">
+  <h2>Top Brands We Deal</h2>
+  <div class="brand-logos">
+    <div class="brand-item">
+      <img src="audi.jpg" alt="Audi" />
+      <p>Audi</p>
+    </div>
+    <div class="brand-item">
+      <img src="bmw.jpg" alt="BMW" />
+      <p>BMW</p>
+    </div>
+    <div class="brand-item">
+      <img src="mercedes.jpg" alt="Mercedes" />
+      <p>Mercedes</p>
+    </div>
+    <div class="brand-item">
+      <img src="kia.jpg" alt="Kia" />
+      <p>Kia</p>
+    </div>
+    <div class="brand-item">
+      <img src="mg.jpg" alt="MG" />
+      <p>MG</p>
+    </div>
+    <div class="brand-item">
+      <img src="land-rover.jpg" alt="Land Rover" />
+      <p>Land Rover</p>
+    </div>
+    <div class="brand-item">
+      <img src="hyundai.jpg" alt="Hyundai" />
+      <p>Hyundai</p>
+    </div>
+    <div class="brand-item">
+      <img src="tata.jpg" alt="Tata" />
+      <p>Tata</p>
+    </div>
+    <div class="brand-item">
+      <img src="mahindra.jpg" alt="Mahindra" />
+      <p>Mahindra</p>
+    </div>
+    <div class="brand-item">
+      <img src="porsche.jpg" alt="Porsche" />
+      <p>Porsche</p>
+    </div>
+    <div class="brand-item">
+      <img src="volvo.jpg" alt="Volvo" />
+      <p>Volvo</p>
+    </div>
+    <div class="brand-item">
+      <img src="citroen.jpg" alt="Citroën" />
+      <p>Citroën</p>
+    </div>
+    <div class="brand-item">
+      <img src="skoda.jpg" alt="Skoda" />
+      <p>Skoda</p>
+    </div>
+  </div>
+</section>
+
 
     <section class="reviews">
       <h2>What Our Customers Say</h2>
