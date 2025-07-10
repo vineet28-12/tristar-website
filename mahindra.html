@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahindra Cars - Tristar Motor Group</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .car-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+    .car-card h3 {
+      margin: 10px 0 5px;
+    }
+    .car-card p {
+      color: #555;
+    }
+    .car-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .car-card a:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="tristar-logo.png" alt="Tristar Logo" />
+    <h1>Tristar Motor Group</h1>
+  </header>
+
+  <div class="container">
+    <h2>Mahindra Cars Available</h2>
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="mahindra-xuv700.jpg" alt="Mahindra XUV700" />
+        <h3>Mahindra XUV700</h3>
+        <p>₹22 Lakhs</p>
+        <a href="mahindra-xuv700.html">View Details</a>
+      </div>
+      <div class="car-card">
+        <img src="mahindra-thar.jpg" alt="Mahindra Thar" />
+        <h3>Mahindra Thar</h3>
+        <p>₹15 Lakhs</p>
+        <a href="mahindra-thar.html">View Details</a>
+      </div>
+      <div class="car-card">
+        <img src="mahindra-scorpio.jpg" alt="Mahindra Scorpio N" />
+        <h3>Mahindra Scorpio N</h3>
+        <p>₹18 Lakhs</p>
+        <a href="mahindra-scorpio.html">View Details</a>
+      </div>
+    </div>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+</body>
+</html>
