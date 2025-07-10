@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audi Models - Tristar Motor Group</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .car-listing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .car-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .car-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .car-card .details {
+      padding: 15px;
+    }
+
+    .car-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #007bff;
+    }
+
+    .car-card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      .car-card h3 {
+        font-size: 18px;
+      }
+
+      .car-card p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="tristar-logo.png" alt="Tristar Logo" />
+  <h1>Tristar Motor Group - Audi Collection</h1>
+</header>
+
+<div class="container">
+  <h2>Available Audi Models</h2>
+
+  <div class="car-listing">
+
+    <!-- Audi A4 -->
+    <a href="audi-a4.html" class="car-card">
+      <img src="audi-a4-front.jpg" alt="Audi A4">
+      <div class="details">
+        <h3>Audi A4</h3>
+        <p>35 TDI Premium Plus</p>
+        <p>₹18,00,000 • 96,000 KM</p>
+      </div>
+    </a>
+
+    <!-- Q5 Monsoon Grey -->
+    <a href="audi-q5-monsoon.html" class="car-card">
+      <img src="audi-q5-monsoon.jpg" alt="Audi Q5 Monsoon">
+      <div class="details">
+        <h3>Audi Q5</h3>
+        <p>30 TDI Quattro • Monsoon Grey</p>
+        <p>₹20,00,000 • 98,000 KM</p>
+      </div>
+    </a>
+
+    <!-- Q3 -->
+    <a href="audi-q3.html" class="car-card">
+      <img src="audi-q3.jpg" alt="Audi Q3">
+      <div class="details">
+        <h3>Audi Q3</h3>
+        <p>30 TDI Premium Plus</p>
+        <p>₹22,00,000 • 49,000 KM</p>
+      </div>
+    </a>
+
+    <!-- A6 -->
+    <a href="audi-a6.html" class="car-card">
+      <img src="audi-a6.jpg" alt="Audi A6">
+      <div class="details">
+        <h3>Audi A6</h3>
+        <p>45 TFSI Technology</p>
+        <p>₹40,00,000 • 36,000 KM</p>
+      </div>
+    </a>
+
+    <!-- Q5 Blue -->
+    <a href="audi-q5-blue.html" class="car-card">
+      <img src="audi-q5-blue.jpg" alt="Audi Q5 Blue">
+      <div class="details">
+        <h3>Audi Q5</h3>
+        <p>TFSI Quattro • Navarra Blue</p>
+        <p>₹60,00,000 • 17,000 KM</p>
+      </div>
+    </a>
+
+    <!-- Q7 35 TDI -->
+    <a href="audi-q7-35tdi.html" class="car-card">
+      <img src="audi-q7-35tdi.jpg" alt="Audi Q7 35 TDI">
+      <div class="details">
+        <h3>Audi Q7</h3>
+        <p>35 TDI Quattro • Orca Black</p>
+        <p>₹33,00,000 • 63,000 KM</p>
+      </div>
+    </a>
+
+    <!-- Q7 45 TDI -->
+    <a href="audi-q7-45tdi.html" class="car-card">
+      <img src="audi-q7-45tdi.jpg" alt="Audi Q7 45 TDI">
+      <div class="details">
+        <h3>Audi Q7</h3>
+        <p>45 TDI Quattro • Carrara White</p>
+        <p>₹58,00,000 • 80,000 KM</p>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>
+
