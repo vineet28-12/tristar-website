@@ -343,49 +343,7 @@ h2::after {
 }
 
 
-/* 🌙 Dark Mode Styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #eee;
-}
 
-.dark-mode header,
-.dark-mode nav,
-.dark-mode footer {
-  background-color: #1f1f1f;
-  color: #fff;
-}
-
-.dark-mode .container,
-.dark-mode .form-container,
-.dark-mode .car,
-.dark-mode .review,
-.dark-mode .thank-you-container {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-.dark-mode a,
-.dark-mode nav a {
-  color: #00bcd4;
-}
-
-.dark-mode .button,
-.dark-mode .hero-btn,
-.dark-mode .test-drive-btn {
-  background-color: #00bcd4;
-  color: black;
-}
-
-.dark-mode .car a.button:hover,
-.dark-mode .hero-btn:hover,
-.dark-mode .test-drive-btn:hover {
-  background-color: #0097a7;
-}
-
-.dark-mode .review {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
 
 
   </style>
@@ -407,10 +365,7 @@ body.dark-mode {
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
 
-  <!-- 🔘 Add toggle here -->
-  <button id="darkModeToggle" style="float: right; background: #444; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
-    🌙 Dark Mode
-  </button>
+
 </nav>
 
 
@@ -570,13 +525,6 @@ body.dark-mode {
     &copy; 2025 Tristar Motor Group. All rights reserved.
   </footer>
 
-<script>
-  const toggle = document.getElementById('darkModeToggle');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
-  });
-</script>
 
 </body>
 </html>
