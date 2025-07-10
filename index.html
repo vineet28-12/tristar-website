@@ -189,6 +189,24 @@
   color: #333;
 }
 
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #111;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
 
 
 
@@ -324,6 +342,52 @@
   }
 }
 
+
+/* 🌙 Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.dark-mode header,
+.dark-mode nav,
+.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.dark-mode .container,
+.dark-mode .form-container,
+.dark-mode .car,
+.dark-mode .review,
+.dark-mode .thank-you-container {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+.dark-mode a,
+.dark-mode nav a {
+  color: #00bcd4;
+}
+
+.dark-mode .button,
+.dark-mode .hero-btn,
+.dark-mode .test-drive-btn {
+  background-color: #00bcd4;
+  color: black;
+}
+
+.dark-mode .car a.button:hover,
+.dark-mode .hero-btn:hover,
+.dark-mode .test-drive-btn:hover {
+  background-color: #0097a7;
+}
+
+.dark-mode .review {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
   </style>
 </head>
 <body>
@@ -336,12 +400,19 @@
     </div>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#inventory">Inventory</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#inventory">Inventory</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+
+  <!-- 🔘 Add toggle here -->
+  <button id="darkModeToggle" style="float: right; background: #444; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">
+    🌙 Dark Mode
+  </button>
+</nav>
+
 
   <section class="hero" id="home">
     <video autoplay muted loop>
@@ -372,58 +443,76 @@
 <section class="brands" id="brands">
   <h2>Top Brands We Deal</h2>
   <div class="brand-logos">
-    <div class="brand-item">
+
+
+    <a href="audi.html" class="brand-item">
       <img src="audi.jpg" alt="Audi" />
       <p>Audi</p>
-    </div>
-    <div class="brand-item">
-      <img src="bmw.jpg" alt="BMW" />
-      <p>BMW</p>
-    </div>
-    <div class="brand-item">
-      <img src="mercedes.jpg" alt="Mercedes" />
-      <p>Mercedes</p>
-    </div>
-    <div class="brand-item">
-      <img src="kia.jpg" alt="Kia" />
-      <p>Kia</p>
-    </div>
-    <div class="brand-item">
+    </a>
+
+
+   <a href="bmw.html" class="brand-item">
+  <img src="bmw.jpg" alt="BMW" />
+  <p>BMW</p>
+</a>
+
+   <a href="mercedes.html" class="brand-item">
+  <img src="mercedes.jpg" alt="Mercedes" />
+  <p>Mercedes</p>
+</a>
+    
+     <a href="kia.html" class="brand-item">
+  <img src="kia.jpg" alt="Kia" />
+  <p>Kia</p>
+</a>
+
+    <a href="mg.html" class="brand-item">
       <img src="mg.jpg" alt="MG" />
       <p>MG</p>
-    </div>
-    <div class="brand-item">
+    </a>
+
+
+      <a href="landrover.html" class="brand-item">
       <img src="land-rover.jpg" alt="Land Rover" />
       <p>Land Rover</p>
-    </div>
-    <div class="brand-item">
+      </a>
+
+
+    <a href="hyundai.html" class="brand-item">
       <img src="hyundai.jpg" alt="Hyundai" />
       <p>Hyundai</p>
-    </div>
-    <div class="brand-item">
+    </a>
+
+    <a href="tata.html" class="brand-item">
       <img src="tata.jpg" alt="Tata" />
       <p>Tata</p>
-    </div>
-    <div class="brand-item">
+    </a>
+
+    <a href="mahindra.html" class="brand-item">
       <img src="mahindra.jpg" alt="Mahindra" />
       <p>Mahindra</p>
-    </div>
-    <div class="brand-item">
-      <img src="porsche.jpg" alt="Porsche" />
+   </a>
+
+      <a href="porsche.html" class="brand-item">
+        <img src="porsche.jpg" alt="Porsche" />
       <p>Porsche</p>
-    </div>
-    <div class="brand-item">
+    </a>
+
+     <a href="volvo.html" class="brand-item">        
       <img src="volvo.jpg" alt="Volvo" />
       <p>Volvo</p>
-    </div>
-    <div class="brand-item">
+    </a>
+
+     <a href="citroen.html" class="brand-item">
       <img src="citroen.jpg" alt="Citroën" />
       <p>Citroën</p>
-    </div>
-    <div class="brand-item">
-      <img src="skoda.jpg" alt="Skoda" />
+    </a>
+
+      <a href="skoda.html" class="brand-item">
+          <img src="skoda.jpg" alt="Skoda" />
       <p>Skoda</p>
-    </div>
+   </a>
+
   </div>
 </section>
 
@@ -480,6 +569,14 @@
   <footer>
     &copy; 2025 Tristar Motor Group. All rights reserved.
   </footer>
+
+<script>
+  const toggle = document.getElementById('darkModeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+  });
+</script>
 
 </body>
 </html>
